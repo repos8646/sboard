@@ -1,0 +1,42 @@
+logging:
+    file:
+        name: /logs/sboard.log
+    level:
+        jdbc:
+            resultsettable: info
+            sqlonly: info
+            sqltiming: info
+        org:
+            hibernate:
+                orm:
+                    jdbc:
+                        bind: trace
+                sql: debug
+        root: info
+app:
+    version: 1.0.1
+server:
+    port: 8080
+    servlet:
+        context-path: /sboard
+spring:
+    application:
+        name: sboard
+    datasource:
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        password: 1234
+        url: jdbc:mysql://localhost:3306/jboard
+        username: jboard
+    devtools:
+        livereload:
+            enabled: true
+    jpa:
+        database: mysql
+        hibernate:
+            ddl-auto: update
+            naming:
+                physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+        properties:
+            hibernate:
+                format_sql: true
+                show_sql: true
