@@ -14,7 +14,7 @@ logging:
                 sql: debug
         root: info
 app:
-    version: 1.0.1
+    version: 0.0.1
 server:
     port: 8080
     servlet:
