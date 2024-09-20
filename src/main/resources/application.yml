@@ -40,3 +40,15 @@ spring:
             hibernate:
                 format_sql: true
                 show_sql: true
+    mail:
+        host: smtp.gmail.com
+            port: 465
+            username: repos8646@gmail.com
+            password: zkviewfzptghjpez # google 앱 비밀번호
+            properties:
+                mail:
+                    smtp:
+                        auth: true
+                        timeout: 5000
+                        starttls:
+                            enable: true

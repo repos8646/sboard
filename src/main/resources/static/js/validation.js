@@ -47,7 +47,7 @@ window.onload = function(){
         }
 
         // 중복체크
-        fetch('/jboard/user/checkUser.do?type=uid&value='+uid)
+        fetch('/sboard/user/register?type=uid&value='+uid)
             .then(resp => resp.json())
             .then(data => {
                 console.log(data);
@@ -118,7 +118,7 @@ window.onload = function(){
 
         }
 
-        fetch('/jboard/user/checkUser.do?type=nick&value='+nick)
+        fetch('/sboard/user/register?type=nick&value='+nick)
             .then(response => response.json())
             .then(data => {
                 console.log(data);
@@ -165,7 +165,7 @@ window.onload = function(){
             preventDblClick = true;
             console.log('here3');
 
-            const response = await fetch('/jboard/user/checkUser.do?type=email&value='+email);
+            const response = await fetch('/sboard/user/register?type=email&value='+email);
             const data = await response.json();
             console.log(data);
 
@@ -192,7 +192,7 @@ window.onload = function(){
 
         const code = registerForm.auth.value;
 
-        fetch('/jboard/user/checkUser.do', {
+        fetch('/sboard/user/register', {
             method: 'POST',
             body: JSON.stringify({"code":code})
         })
@@ -226,7 +226,7 @@ window.onload = function(){
             return;
         }
 
-        fetch('/jboard/user/checkUser.do?type=hp&value='+hp)
+        fetch('/sboard/user/register?type=hp&value='+hp)
             .then(response => response.json())
             .then(data => {
                 console.log(data);
